@@ -10,6 +10,9 @@ package com.myj.designpattern.InterfaceSegreation;
  * 一个类通过接口依赖另一个类，我们希望这个接口是最小的
  * （按接口隔离原则：用不到的方法可以拆分接口）
  *
+ *
+ * 1) 类A通过接口Interface1依赖类B，类C通过接口Interface1依赖类D，如果接口 Interface1对于类A和类C来说不是最小接口，那么类B和类D必须去实现他们不 需要的方法
+ 2) 将接口Interface1拆分为独立的几个接口，类A和类C分别与他们需要的接口建立 依赖关系。也就是采用接口隔离原则
  */
 
 public class Segreation2 {
