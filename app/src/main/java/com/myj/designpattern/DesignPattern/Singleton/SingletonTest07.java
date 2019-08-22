@@ -19,6 +19,8 @@ public class SingletonTest07 {
         System.out.println("singleton2 hashcode =" + singleton2.hashCode());
         Singleton1.method1();
 
+//        Runtime
+
     }
 }
 
