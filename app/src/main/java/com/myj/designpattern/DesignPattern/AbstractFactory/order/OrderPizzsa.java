@@ -1,6 +1,6 @@
-package com.myj.designpattern.DesignPattern.FactoryMethod.order;
+package com.myj.designpattern.DesignPattern.AbstractFactory.order;
 
-import com.myj.designpattern.DesignPattern.FactoryMethod.pizzsa.Pizzsa;
+import com.myj.designpattern.DesignPattern.AbstractFactory.pizzsa.Pizzsa;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -25,13 +25,13 @@ import java.io.InputStreamReader;
 
 public  class OrderPizzsa {
 
-    private SimpleFactory mSimpleFactory;
+    private AbstractFactory mSimpleFactory;
 
-    public OrderPizzsa(SimpleFactory factory) {
+    public OrderPizzsa(AbstractFactory factory) {
         setSimpleFactory(factory);
     }
 
-    public void setSimpleFactory(SimpleFactory simpleFactory) {
+    public void setSimpleFactory(AbstractFactory simpleFactory) {
         this.mSimpleFactory = simpleFactory;
         Pizzsa pizzsa;
         do {

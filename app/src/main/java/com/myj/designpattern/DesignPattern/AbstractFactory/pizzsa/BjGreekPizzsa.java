@@ -1,4 +1,4 @@
-package com.myj.designpattern.DesignPattern.FactoryMethod.pizzsa;
+package com.myj.designpattern.DesignPattern.AbstractFactory.pizzsa;
 
 /**
  * Created by maoyujiao on 2019/8/23.
