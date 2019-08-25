@@ -1,4 +1,4 @@
-package com.myj.designpattern.DesignPattern.adapter;
+package com.myj.designpattern.DesignPattern.adapter.ObjectAdapter;
 
 /**
  * Created by maoyujiao on 2019/8/25.
