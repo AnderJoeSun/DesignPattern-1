@@ -13,7 +13,7 @@ package com.myj.designpattern.DesignPattern.adapter.InterfaceAdapter;
 
 public class Client {
     public static void main(String[] agrs){
-        IInterface adapter = new IInterface(){
+        IInterface adapter = new IInterface(){ //将src作为接口
 
             @Override
             public void method1() {
