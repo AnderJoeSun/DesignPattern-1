@@ -1,0 +1,29 @@
+装饰着模式：咖啡+调料
+主体（Drink）
+ConcreteDrink
+装饰者（继承Drink聚合被装饰者即主体）
+ConcreteDecorate.
+递归
+
+星巴克咖啡订单项目(咖啡馆):
+1) 咖啡种类/单品咖啡:Espresso(意大利浓咖啡)、ShortBlack、LongBlack(美式 咖啡)、Decaf(无因咖啡)
+2) 调料:Milk、Soy(豆浆)、Chocolate
+3) 要求在扩展新的咖啡种类时，具有良好的扩展性、改动方便、维护方便
+4) 使用OO的来计算不同种类咖啡的费用:客户可以点单品咖啡，也可以单品咖 啡+调料组合。
+
+装饰者模式定义
+1) 装饰者模式:动态的将新功能附加到对象上（实现：在装饰者类里面添加被装饰者属性，然后重写被装饰者方法以扩展）。
+在对象功能扩展方面，它比继承更 有弹性，装饰者模式也体现了开闭原则(ocp)
+2) 这里提到的动态的将新功能附加到对象和ocp原则，
+在后面的应用实例上会以代 码的形式体现，请同学们注意体会。
+
+
+装饰者模式在JDK应用的源码分析
+Java的IO结构，FilterInputStream就是一个装饰者
+
+//说明
+//1. InputStream 是抽象类, 类似我们前面讲的 Drink
+//2. FileInputStream 是 InputStream 子类，类似我们前面的 DeCaf, LongBlack
+//3. FilterInputStream 是 InputStream 子类:类似我们前面 的 Decorator 修饰者
+//4. DataInputStream 是 FilterInputStream 子类，具体的修饰者，类似前面的 Milk, Soy 等 //5. FilterInputStream 类 有 protected volatile InputStream in; 即含被装饰者
+//6. 分析得出在 jdk 的 io 体系中，就是使用装饰者模式
