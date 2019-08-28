@@ -1,4 +1,4 @@
-package com.myj.designpattern.DesignPattern.Component;
+package com.myj.designpattern.DesignPattern.Composite;
 
 /**
  * Created by maoyujiao on 2019/8/28.

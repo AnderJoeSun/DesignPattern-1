@@ -1,4 +1,4 @@
-package com.myj.designpattern.DesignPattern.Component;
+package com.myj.designpattern.DesignPattern.Composite;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,10 +7,10 @@ import java.util.List;
  * Created by maoyujiao on 2019/8/28.
  */
 
-public class College extends OrganizationComponent {
+public class University extends OrganizationComponent {
     List<OrganizationComponent> components = new ArrayList<>();
 
-    public College(String name, String desc) {
+    public University(String name, String desc) {
         super(name, desc);
     }
 
@@ -28,7 +28,7 @@ public class College extends OrganizationComponent {
     protected void getComponent() {
         System.out.println("------"+getName()+"------");
         for(OrganizationComponent component : components){
-            System.out.println(component.getName());
+            component.getComponent();
         }
     }
 }

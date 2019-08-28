@@ -1,7 +1,4 @@
-package com.myj.designpattern.DesignPattern.Component;
-
-import java.util.HashMap;
-import java.util.Map;
+package com.myj.designpattern.DesignPattern.Composite;
 
 /**
  * Created by maoyujiao on 2019/8/28.
