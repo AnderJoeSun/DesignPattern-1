@@ -12,7 +12,7 @@ public class ConcretFlyweight extends FlyWeight {
     }
 
     @Override
-    public void run() {
-        System.out.println("正在运行" + type +"网站");
+    public void run(User user) {
+        System.out.println(user.getName() + "正在运行" + type +"网站");
     }
 }

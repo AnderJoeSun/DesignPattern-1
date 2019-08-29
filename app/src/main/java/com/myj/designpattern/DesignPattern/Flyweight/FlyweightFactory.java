@@ -9,14 +9,17 @@ import java.util.Map;
 
 public class FlyweightFactory {
 
-    private Map<String,FlyWeight> list = new HashMap<>();
+    private Map<String,FlyWeight> pool = new HashMap<>();
 
     public FlyWeight getFlyweight(String type){
-        if(list.containsKey(type)){
-            return list.get(type);
-        }else {
-            return new ConcretFlyweight(type);
+        if(!pool.containsKey(type)) { //就创建一个网站，并放入到池中
+             pool.put(type, new ConcretFlyweight(type));
         }
+        return pool.get(type);
+    }
+
+    public int getCount(){
+        return pool.size();
     }
 
 
