@@ -6,7 +6,10 @@ package com.myj.designpattern.DesignPattern.Template;
 
 public class Client {
     public static void main(String[] args){
-        RedbeanSoyaMilk redbeanSoyaMilk = new RedbeanSoyaMilk();
+        SoyaMilk redbeanSoyaMilk = new RedbeanSoyaMilk();
         redbeanSoyaMilk.makeSoyaMilk();
+
+        SoyaMilk pureSoyaMilk = new PureSoyaMilk();
+        pureSoyaMilk.makeSoyaMilk();
     }
 }

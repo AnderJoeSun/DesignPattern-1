@@ -2,6 +2,10 @@ package com.myj.designpattern.DesignPattern.Template;
 
 /**
  * Created by maoyujiao on 2019/8/31.
+ *
+ * 模板方法模式的钩子方法
+ 1) 在模板方法模式的父类中，我们可以定义一个方法，它默认不做任何事，
+ 子类可以 视情况要不要覆盖它，该方法称为“钩子”。
  */
 
 public abstract class SoyaMilk {
@@ -10,7 +14,9 @@ public abstract class SoyaMilk {
     public final void makeSoyaMilk(){
         System.out.println("开始制作");
         select();
-        addOther();
+        if(isAddOther()) {
+            addOther();
+        }
         soak();
         beat();
         System.out.println("豆浆制作结束");
@@ -28,5 +34,9 @@ public abstract class SoyaMilk {
 
     public void beat(){
         System.out.println("开始打豆浆");
+    }
+
+    public boolean isAddOther(){
+        return true;
     }
 }
