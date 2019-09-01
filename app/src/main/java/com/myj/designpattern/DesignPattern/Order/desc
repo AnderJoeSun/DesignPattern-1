@@ -32,3 +32,15 @@ Invoker是调用者(将军)，Receiver是被调用者(士兵)， MyCommand是命
   有用空命令，我们每按下一个按键都要判空，这给我们编码带来一定的麻烦。
 6) 命令模式经典的应用场景:界面的一个按钮都是一条命令、模拟CMD(DOS命令)
 订单的撤销/恢复、触发-反馈机制
+
+
+
+命令模式在Spring框架JdbcTemplate应用的源码分析
+ 模式角色分析说明
+- StatementCallback 接口 ,类似命令接口(Command)
+- class QueryStatementCallback implements StatementCallback<T>, SqlProvider ,
+匿名内 部类， 实现了命令接口， 同时也充当命令接收者
+- 命令调用者 是 JdbcTemplate , 其中execute(StatementCallback<T> action) 方法中，
+调 用action.doInStatement 方法. 不同的 实现 StatementCallback 接口的对象，
+对应不同 的doInStatemnt 实现逻辑
+- 另外实现 StatementCallback 命令接口的子类还有 QueryStatementCallback
