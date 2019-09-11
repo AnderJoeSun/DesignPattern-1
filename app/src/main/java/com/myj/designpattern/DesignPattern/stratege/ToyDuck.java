@@ -14,10 +14,6 @@ public class ToyDuck extends Duck {
         System.out.println(name + "不会飞");
     }
 
-    @Override
-    public void swim() {
-        System.out.println(name + "不会游");
-    }
 
     @Override
     public void quack() {

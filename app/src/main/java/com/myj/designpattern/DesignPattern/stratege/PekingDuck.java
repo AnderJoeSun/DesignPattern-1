@@ -5,12 +5,10 @@ package com.myj.designpattern.DesignPattern.stratege;
  */
 
 public class PekingDuck extends Duck {
+
     public PekingDuck(String name) {
         super(name);
     }
 
-    @Override
-    public void swim() {
-        System.out.println(name + "不会游");
-    }
+
 }
