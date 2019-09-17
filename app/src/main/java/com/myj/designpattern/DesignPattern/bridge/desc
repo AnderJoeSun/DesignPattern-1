@@ -15,7 +15,7 @@
 的类承担不同的职责。它的主要特点是把抽象(Abstraction)与行为实现 (Implementation)分离开来，
 从而可以保持各部分的独立性以及应对他们的功能扩展。
 
-4中角色介绍：
+4中角色介绍：抽象类和接口，将接口聚合到抽象类中
 1) Client 类:桥接模式的调用者
 2) 抽象类(Abstraction) :维护了 Implementor / 即它的实现类 ConcreteImplementorA.., 二者是聚合关系, Abstraction充当桥接类
 3) RefinedAbstraction : 是 Abstraction 抽象类的子类
@@ -31,6 +31,9 @@ sql:Connection  mySql Connection MysqlConnection ConnnectionImpl
 2) 代码分析+Debug源码
 
 
+脱耦：脱耦就是将抽象化和实现化之间的耦合解脱开，或者说是将它们之间的强关联改换成弱关联，
+将两个角色之间的继承关系改为关联关系。桥接模式中的所谓脱耦，就是指在一个软件系统的抽象化和实现化之间使用关联关系（组合或者聚合关系）
+而不是继承关系，从而使两者可以相对独立地变化，这就是桥接模式的用意。
 
 桥接模式的注意事项和细节
 1) 实现了抽象和实现部分的分离，从而极大的提供了系统的灵活性，让抽象部分和实 现部分独立开来，
