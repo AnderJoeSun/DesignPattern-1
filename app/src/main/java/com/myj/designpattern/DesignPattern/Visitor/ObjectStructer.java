@@ -22,7 +22,7 @@ public class ObjectStructer {
 
     public void display(Action action){
         for(Person person:persons){
-            person.accept(action);
+            person.accept(action);//接收访问者，并在该方法内部调用访问者的访问操作
         }
     }
 }
